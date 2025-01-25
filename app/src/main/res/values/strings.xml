@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">My Photos</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="camera_fragment_label">&#160;Photo Studio</string>
+    <string name="gallery_fragment_label">&#160;Gallery</string>
+    <string name="image_fragment_label">&#160;Image View</string>
+    <string name="editor_fragment_label">&#160;Editor</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <!-- Camera fragment -->
+    <string name="normal">NORMAL</string>
+    <string name="aqua">AQUA</string>
+    <string name="blackboard">BLACKBOARD</string>
+    <string name="negative">NEGATIVE</string>
+    <string name="posterize">POSTERIZE</string>
+    <string name="sepia">SEPIA</string>
+    <string name="solarize">SOLARIZE</string>
+    <string name="whiteboard">WHITEBOARD</string>
+    <string name="mono">MONO</string>
+
+    <!-- Settings -->
+    <string name="title_activity_settings">Settings</string>
+    <string name="back">Back</string>
+    <string name="apply_and_back">Apply and back</string>
+    <string name="object_detection">Object Detection</string>
+    <string name="cameraFlash">Camera Flash</string>
+    <string name="image_quality">Image Quality</string>
+    <string name="date_not_set">DATE NOT SET</string>
+
+
+    <string-array name="gallery_search_modes">
+        <item>Year</item>
+        <item>Month</item>
+        <item>Day</item>
+    </string-array>
+
+    <string name="contrast_filter">Contrast Filter</string>
+    <string name="empty">Empty</string>
+    <string name="brightness_filter">Brightness Filter</string>
+    <string name="saturation_filter">Saturation Filter</string>
+    <string name="rgb_filter">RGB Filter</string>
+    <string name="rgb_filter_red"><![CDATA[Red    ]]></string>
+    <string name="rgb_filter_green">Green</string>
+    <string name="rgb_filter_blue"><![CDATA[Blue   ]]></string>
+    <string name="edit_button_desc"><![CDATA[" <string name=\"edit_button_desc\">Edit</string>"]]></string>
+    <string name="export_button_desc"><![CDATA[" <string name=\"export_button_desc\">Export</string>"]]></string>
+    <string name="delete_button_desc"><![CDATA[<string name=\"delete_button_desc\">Delete</string>]]></string>
+
+</resources>

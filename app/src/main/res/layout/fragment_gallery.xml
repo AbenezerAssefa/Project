@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_1"
+    android:orientation="vertical"
+    tools:context=".GalleryFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/timeSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12. 12. 1999"
+            android:textColor="@color/white"
+            app:icon="@android:drawable/ic_lock_idle_alarm" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:foregroundTint="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/button_find"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:src="@drawable/find_icon"
+            android:gravity="center"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/button_delete"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:src="@drawable/delete_icon"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="cz.utb.photostudio.MainActivity">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

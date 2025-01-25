@@ -1,0 +1,42 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme -->
+    <style name="Theme.PhotoStudio" parent="Theme.MaterialComponents.DayNight">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Navigation bar -->
+        <item name="android:navigationBarColor">@color/black</item>
+
+        <!-- Custom colors -->
+        <item name="colorAccent">@color/neonGreen</item>
+        <item name="color">@color/sunnyYellow</item>
+        <item name="colorSurface">@color/seaGreen</item>
+        <item name="colorError">@color/fireBrick</item>
+    </style>
+
+    <style name="Theme.PhotoStudio.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Splash theme -->
+    <style name="FullscreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:navigationBarColor">@color/black</item>
+    </style>
+
+    <style name="Theme.PhotoStudio.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.PhotoStudio.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

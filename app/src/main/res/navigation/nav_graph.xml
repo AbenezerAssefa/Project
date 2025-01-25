@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/CameraFragment">
+
+    <fragment
+        android:id="@+id/CameraFragment"
+        android:name="cz.utb.photostudio.CameraFragment"
+        android:label="@string/camera_fragment_label"
+        tools:layout="@layout/fragment_camera">
+
+        <action
+            android:id="@+id/From_Camera_To_Gallery"
+            app:destination="@id/GalleryFragment" />
+        <action
+            android:id="@+id/action_CameraFragment_to_editorFragment"
+            app:destination="@id/editorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/GalleryFragment"
+        android:name="cz.utb.photostudio.GalleryFragment"
+        android:label="@string/gallery_fragment_label"
+        tools:layout="@layout/fragment_gallery">
+        <action
+            android:id="@+id/action_GalleryFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="cz.utb.photostudio.ImageFragment"
+        android:label="@string/image_fragment_label"
+        tools:layout="@layout/fragment_image" >
+        <action
+            android:id="@+id/action_imageFragment_to_editorFragment"
+            app:destination="@id/editorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editorFragment"
+        android:name="cz.utb.photostudio.EditorFragment"
+        android:label="@string/editor_fragment_label" />
+</navigation>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CameraFragment"
+    android:background="@color/black_1">
+
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:ignore="MissingConstraints"/>
+
+    <cz.utb.photostudio.object_detection.ResultPainter
+        android:id="@+id/overlay"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_1"
+        android:fadeScrollbars="false"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayoutCompat"
+        tools:ignore="MissingConstraints"
+        android:gravity="center"
+        android:paddingHorizontal="15dp"
+        android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/horizontal_outer_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:background="@color/black_1"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingBottom="15dp">
+            <TextView
+                android:id="@+id/fx_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foregroundTint="@color/white"
+                android:padding="10dp"
+                android:text="@string/normal"
+                android:textColor="#FFFFFF" />
+            <TextView
+                android:id="@+id/fx_aqua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foregroundTint="@color/white"
+                android:padding="10dp"
+                android:text="@string/aqua"
+                android:textColor="#FFFFFF" />
+            <TextView
+                android:id="@+id/fx_blackboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foregroundTint="@color/white"
+                android:padding="10dp"
+                android:text="@string/blackboard"
+                android:textColor="#FFFFFF" />
+            <TextView
+                android:id="@+id/fx_negative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foregroundTint="@color/white"
+                android:padding="10dp"
+                android:text="@string/negative"
+                android:textColor="#FFFFFF" />
+            <TextView
+                android:id="@+id/fx_posterize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foregroundTint="@color/white"
+                android:padding="10dp"
+                android:text="@string/posterize"
+                android:textColor="#FFFFFF" />
+            <TextView
+                android:id="@+id/fx_sepia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foregroundTint="@color/white"
+                android:padding="10dp"
+                android:text="@string/sepia"
+                android:textColor="#FFFFFF" />
+            <TextView
+                android:id="@+id/fx_solarize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foregroundTint="@color/white"
+                android:padding="10dp"
+                android:text="@string/solarize"
+                android:textColor="#FFFFFF" />
+            <TextView
+                android:id="@+id/fx_mono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foregroundTint="@color/white"
+                android:padding="10dp"
+                android:text="@string/mono"
+                android:textColor="#FFFFFF" />
+            <TextView
+                android:id="@+id/fx_whiteboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foregroundTint="@color/white"
+                android:padding="10dp"
+                android:text="@string/whiteboard"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="45dp"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+        <ImageButton
+            android:id="@+id/button_gallery"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@null"
+            android:src="@drawable/gallery_icon" />
+        <Space
+            android:layout_width="25dp"
+            android:layout_height="wrap_content" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_capture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="0dp"
+            android:tint="@color/white"
+            app:srcCompat="@drawable/ic2"
+            tools:ignore="MissingConstraints" />
+        <Space
+            android:layout_width="25dp"
+            android:layout_height="wrap_content" />
+        <ImageButton
+            android:id="@+id/button_edit"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@null"
+            android:src="@drawable/edit_icon" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/imageview_last"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="42dp"
+        android:src="@drawable/ic_launcher_foreground1"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="1dp"
+        app:civ_shadow="true"
+        app:civ_shadow_color="#444444"
+        app:civ_shadow_radius="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
